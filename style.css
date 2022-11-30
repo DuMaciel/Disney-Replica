@@ -1,42 +1,54 @@
-html{
+:root {
     padding: 0;
     margin: 0;
-    --blue: hsl(214.1,100%,45%);
-    --dark-blue: hsl(228.8,67%,5%);
-    --violet: hsl(258.1,100%,56%);
-    --violet-dark: hsl(252,62%,25%);
+    --blue: hsl(214.1, 100%, 45%);
+    --dark-blue: hsl(228.8, 67%, 5%);
+    --violet: hsl(258.1, 100%, 56%);
+    --violet-dark: hsl(252, 62%, 25%);
+
     color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-body{
+body {
     background-color: var(--dark-blue);
 }
 
 
 /* Movies section */
-.movies{
+.movies {
     padding: 0 4%;
 }
 
-.movies .movies-nav ul{
+.movies .movies-nav ul {
     padding: 2em;
-    margin: 0;
-    width: 100%;
+    width: 30em;
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
-.movies .movies-nav ul li{
+
+.movies .movies-nav ul li {
+    padding-bottom: 0.5em;
     list-style: none;
     text-transform: uppercase;
+    border-bottom: 0.3em solid transparent;
+
 }
 
-.movies article{
+.movies .movies-nav ul li:hover {
+
+    border-bottom: 0.3em solid white;
+}
+
+.movies article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 1.5em;
 }
-.movies article img{
+
+.movies article img {
     border-radius: 0.3em;
     width: 100%;
 }
