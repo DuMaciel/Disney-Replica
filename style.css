@@ -1,42 +1,119 @@
 :root {
     padding: 0;
     margin: 0;
+    --grey: hsl(228, 21%, 9%);
     --blue: hsl(214.1, 100%, 45%);
     --dark-blue: hsl(228.8, 67%, 5%);
     --violet: hsl(258.1, 100%, 56%);
+    --violet-white: hsl(258.1, 0%, 75%);
     --violet-dark: hsl(252, 62%, 25%);
 
+    box-sizing: border-box;
     color: white;
     font-family: 'Inter', sans-serif;
+    
 }
 
 body {
-    background-color: var(--dark-blue);
+    background: var(--dark-blue) url('https://cnbl-cdn.bamgrid.com/assets/1546b1222e513c2653e3c9faca2b009df570da1f6e6b3dbcc83d25d4bbd5bca0/original');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+main > section, footer{
+    padding: 0 4%;
+    margin-top: 7em;
+    box-sizing: border-box;
+}
+
+.title{
+    margin: 0;
+    font-weight: 600;
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+.button{
+    display: block;
+    color: white;
+    padding: 0.9em;
+    text-decoration: none;
+    background-color: var(--violet);
+    border-radius: 0.3em;
+}
+
+
+
+/* Home section  */
+.home{
+    margin-top: 55vw;
+    text-align: center;
+    
+}
+.home h1{
+    font-size: 1.3em;
+    letter-spacing: 0.02em;
+    
+}
+
+.home > img{
+    width: 12em;
+    margin-bottom: 1em;
+}
+
+.home .grid-plans{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.home .grid-plans .plan{
+    width: 20em;
+    margin-top: 1em;
+}
+
+.home .grid-plans .plan img{
+    width: 100%;
+    padding: 1em 2em;
+    box-sizing: border-box;
+}
+
+.home .plan:nth-child(4){
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+.home .plan:nth-child(4) a{
+    color: var(--violet-white);
+    font-size: 90%;
+    line-height: 2;
 }
 
 
 /* Movies section */
-.movies {
-    padding: 0 4%;
-}
-
 .movies .movies-nav ul {
-    padding: 2em;
-    width: 30em;
+    box-sizing: border-box;
+    padding: 2.5em 0;
+    max-width: 30em;
     margin: auto;
     display: flex;
     justify-content: space-around;
 }
 
 .movies .movies-nav ul li {
-    padding-bottom: 0.5em;
+    font-weight: 400;
+    padding-bottom: 0.7em;
     list-style: none;
     text-transform: uppercase;
     border-bottom: 0.3em solid transparent;
 
 }
 
-.movies .movies-nav ul li:hover {
+.movies .movies-nav ul li.activated {
 
     border-bottom: 0.3em solid white;
 }
@@ -51,4 +128,162 @@ body {
 .movies article img {
     border-radius: 0.3em;
     width: 100%;
+}
+
+.movies article.disabled{
+    display: none;
+}
+
+
+/* plans section  */
+.plans{
+    text-align: center;
+}
+.plans .grid-plans{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    
+}
+.plans .grid-plans .plan{
+    width: 20em;
+    padding: 3em 1em 0;
+    box-sizing: border-box;
+    margin: 4em 0 4em;
+}
+
+
+.plans .grid-plans .plan img{
+    width: 100%;
+}
+.plans .grid-plans .plan .price{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+    margin-top: 1.5em;
+}
+
+.plans .grid-plans .plan .informations{
+    margin-top: 0;
+    color: var(--violet-white);
+    font-size: .9em;
+    line-height: 1.8;
+}
+
+.plans .reminder{
+    font-size: 0.7em;
+    color: var(--violet-white);
+    margin: 0;
+}
+
+
+/* introduction section */
+.introduction article{
+    text-align: center;
+    padding: 5em 0;
+}
+.introduction article .informations{
+    padding: 1em;
+    color: var(--violet-white);
+    line-height: 1.5;
+}
+
+.introduction article img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.introduction article:nth-child(2){
+    font-size: 90%;
+}
+
+
+
+/* devices section  */
+.devices{
+    text-align: center;
+}
+
+.devices .grid-devices{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.devices .grid-devices article{
+    margin: 1em;
+}
+
+.devices .grid-devices article img{
+    width: 100%;
+}
+.devices .grid-devices article .title{
+    font-size: 1.3em;
+    margin: 1em;
+}
+.devices .grid-devices article .informations{
+    font-size: 0.9em;
+    color: var(--violet-white);
+    line-height: 1.8;
+}
+
+
+
+/* questions section  */
+.questions h2{
+    margin-top: 6em;
+    text-align: center;
+}
+
+.questions ul{
+    margin: 0;
+    padding: 0;
+}
+.questions ul .question{
+    list-style: none;
+    background: var(--grey);
+    padding: 1.8em;
+    margin: 1em 0;
+}
+.questions ul .question .title{
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.questions .question .toOpen{
+    display: none;
+}
+
+
+/* footer section  */
+footer{
+    margin: 10em 0 7em;
+    font-size: 69%;
+    text-align: center;
+    color: var(--violet-white);
+    line-height: 1.8;
+}
+
+footer img{
+    margin: 0;
+    display: inline-block;
+    width: 8em;
+}
+
+footer li{
+    display: inline-block;
+    list-style: none;
+}
+
+footer a{
+    display: block;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    color: var(--violet-white);
+}
+
+footer p{
+    margin: 2em 0;
 }
