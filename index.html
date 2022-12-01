@@ -20,14 +20,33 @@
     </header>
 
     <main>
-        <section class="">
+        <section class="home">
+            <img src="images/logo.svg" alt="">
+            
+            <div class="grid-plans">
+            <h1 class="title">As melhores história em um só lugar.</h1>
+            <article class="plan">
+                <img src="./images/home/comboDuplo.png" alt="">
+                <a class="button" href="#">ASSINE AGORA</a>
+            </article>
+            <article class="plan">
+                <img src="./images/home/comboTriplo.png" alt="">
+                <a class="button" href="#">ASSINE AGORA</a>
+            </article>
+            <article class="plan">
+                <p><a href="#">Assinar somente o Disney+ mensal</a></p>
+                <p><a href="#">Assinar somente o Disney+ anual</a></p>
+            </article>
+            </div>
 
+            
+            
         </section>
 
         <section class="movies">
             <nav class="movies-nav">
                 <ul>
-                    <li>Em breve</li>
+                    <li class="activated">Em breve</li>
                     <li>Mais populares</li>
                     <li>Mais no star+</li>
                 </ul>
@@ -42,7 +61,7 @@
                 <img src="./images/movies/emBreve/6.jfif" alt="">
             </article>
 
-            <article class="popular">
+            <article class="popular disabled">
                 <img src="./images/movies/popular/1.jfif" alt="">
                 <img src="./images/movies/popular/2.jfif" alt="">
                 <img src="./images/movies/popular/3.jfif" alt="">
@@ -51,7 +70,7 @@
                 <img src="./images/movies/popular/6.jfif" alt="">
             </article>
 
-            <article class="noStar">
+            <article class="noStar disabled">
                 <img src="./images/movies/noStar/1.jfif" alt="">
                 <img src="./images/movies/noStar/2.jfif" alt="">
                 <img src="./images/movies/noStar/3.jfif" alt="">
@@ -63,6 +82,8 @@
 
         <section class="plans">
             <h2 class="title">Escolha seu plano</h2>
+
+        <div class="grid-plans">
             <article class="plan">
                 <img src="./images/plans/LogoDisney.png" alt="">
                 <p class="price">R$ 27,90/mês*</p>
@@ -86,6 +107,7 @@
                     juntos.</p>
                 <a class="button" href="#">ASSINE AGORA</a>
             </article>
+        </div>
 
             <p class="reminder">*O preço pode variar caso a assinatura seja feita através de outras plataformas.</p>
         </section>
@@ -108,6 +130,7 @@
 
         <section class="devices">
             <h2 class="title">Disponível nos seus dispositivos favoritos</h2>
+            <div class="grid-devices">
             <article>
                 <img src="./images/devices/not.png" alt="">
                 <p class="title">Computador</p>
@@ -150,16 +173,93 @@
                     iPhone e iPad<br>
                 </p>
             </article>
+            </div>
         </section>
 
         <section class="questions">
+            <h2 class="title">Perguntas Frequentes</h2>
+            <ul>
+                <li class="question">
+                    <p class="title">O que está incluido no Disney+?</p>
+                    <div class="toOpen">
+                    <ul class="response">
+                        <p>O Disney+ oferece:</p>
 
+                        <li>Experiência premium sem intervalos comerciais.</li>
+
+                        <li>As melhores histórias da Disney, Pixar, Marvel, Star Wars e National Geographic, tudo em um só lugar.</li>
+
+                        <li>Groupwatch: assista junto com amigos ou familiares, mesmo separados.</li>
+
+                        <li>Downloads ilimitados em até 10 dispositivos compatíveis.</li>
+
+                        <li>Mais de 300 títulos em 4K UHD e HDR.</li>
+
+                        <li>A possibilidade de assistir em até 4 dispositivos compatíveis simultaneamente sem custo adicional.</li>
+
+                        <li>IMAX Enhanced: disponível para alguns títulos da Marvel em dispositivos compatíveis com o Disney+.</li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="question">
+                    <p class="title">Já tem o Disney+ ou o Star+ e quer o Combo+?</p>
+                    <div class="toOpen">
+                    <ul class="response">
+                        <p>Ao assinar o Combo+:</p>
+
+                        <li>O valor da sua assinatura existente (anual ou mensal) será descontado do preço do Combo+.</li>
+
+                        <li>Se você assina o plano mensal, o valor que você paga mensalmente será descontado do preço do Combo+.</li>
+
+                        <li>Se você assina o plano anual, dividiremos o valor que você já pagou em 12 vezes e descontaremos esse valor do preço do Combo+ mensalmente.</li>
+
+                        <li>Você vai receber um e-mail com os valores detalhados assim que finalizar o pagamento.</li>
+
+                        <li>Lembre-se: você pode cancelar a assinatura quando quiser.</li>
+
+                        <li>No momento, apenas a assinatura mensal do Combo+ está disponível.</li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="question">
+                    <p class="title">Quais formas de pagamento posso utilizar?</p>
+                    <div class="toOpen">
+                    <p class="response">Você pode utilizar: cartão de débito, cartão de crédito, PayPal, Mercado Pago, e também empresas parceiras como Google Play Store, App Store da Apple; Mercado Livre e provedores locais de TV, telefonia e internet.</p> 
+                    </div>
+                </li>
+                <li class="question">
+                    <p class="title">Como posso ver conteúdo com classificação indicativa até 16 e 18?</p>
+                    <div class="toOpen">
+                    <p class="response">Para poder acessar o catálogo completo que inclui conteúdo com classificação indicativa até 16 e 18, todos os usuários do Disney+ na América Latina devem atualizar as configurações de controle parental do perfil. É possível restringir o conteúdo de cada perfil e também adicionar um PIN de bloqueio. Os usuários que preferirem manter a configuração atual vão continuar aproveitando o Disney+ com a classificação indicativa até 14, podendo alterá-la a qualquer momento em "Editar Perfis".</p> 
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer>
+        <img src="images/logo.svg" alt="">
 
+
+        <nav>
+            <ul>
+                <li><a href="#">Português</a></li>
+                <li><a href="#">Termos e Condições de Uso</a></li>
+                <li><a href="#">Política de privacidade</a></li>
+                <li><a href="#">Proteção de Dados no Brasil</a></li>
+                <li><a href="#">Anúncios personalizados</a></li>
+                <li><a href="#">Dispositivos compatíveis</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre o Disney+</a></li>
+            </ul>
+
+        </nav>
+
+        <p>® 2022 Disney, Disney+ e The Walt Disney Company. Todos os direitos reservados. Serviço de assinatura paga. Conteúdo sujeito a disponibilidade.</p>
+
+        <p>Disney+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20</p>
     </footer>
 </body>
 
 </html>
+
