@@ -35,7 +35,7 @@ footer {
     font-weight: 600;
 }
 
-a:hover{
+a:hover {
     color: white;
 }
 
@@ -53,7 +53,7 @@ a.button {
     transition: filter 1s ease;
 }
 
-a.button:hover{
+a.button:hover {
     filter: brightness(1.3);
     transition: filter 0.5s ease;
 }
@@ -108,11 +108,11 @@ header ul li:last-child a.button:hover {
     filter: brightness(0.95);
     color: rgb(0, 0, 0);
     background-color: white;
-    
+
 }
 
 /* hide logo and button  */
-header.hide{
+header.hide {
     background-color: transparent;
 }
 
@@ -150,6 +150,7 @@ header.hide ul li:first-child a.button {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-items: center;
+    align-items: flex-end;
 }
 
 .home .grid-plans .plan {
@@ -168,7 +169,7 @@ header.hide ul li:first-child a.button {
     margin-bottom: 2em;
 }
 
-.home .plan:nth-child(4) a {
+.home #altHeader a {
     color: var(--violet-white);
     font-size: 90%;
     line-height: 2;
@@ -179,7 +180,7 @@ header.hide ul li:first-child a.button {
 .movies .movies-nav ul {
     box-sizing: border-box;
     padding: 2.5em 0;
-    max-width: 30em;
+    max-width: 24em;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -235,7 +236,8 @@ header.hide ul li:first-child a.button {
     box-sizing: border-box;
     margin: 2em 0 4em;
 }
-.plan.emphasis{
+
+.plan.emphasis {
     background: url('https://cnbl-cdn.bamgrid.com/assets/56773c66e02b16eb7603c803037f43e8572ea3a61574abd664f409a385a0b333/original');
     background-position: center;
     background-repeat: no-repeat;
@@ -354,13 +356,13 @@ header.hide ul li:first-child a.button {
     line-height: 1.8;
 }
 
-.questions ul .question .title p{
+.questions ul .question .title p {
     margin: 0;
     font-size: 0.9em;
 
 }
 
-.questions ul .question .title img{
+.questions ul .question .title img {
     height: 1.5em;
     margin-left: 0.5em;
 }
@@ -374,21 +376,22 @@ header.hide ul li:first-child a.button {
 }
 
 
-.questions .question .toOpen .response{
+.questions .question .toOpen .response {
     text-align: justify;
     margin: 0;
-    font-size: 0.9em; 
+    font-size: 0.9em;
     line-height: 1.8;
     margin-top: 1.8em;
 }
 
-.questions .question .toOpen .response li{
+.questions .question .toOpen .response li {
     list-style: disc;
     list-style-position: inside;
     margin-top: 1em;
-    
+
 }
-.questions .question .toOpen .response li::before{
+
+.questions .question .toOpen .response li::before {
     content: "";
     margin: -0.4em;
 }
@@ -397,7 +400,7 @@ header.hide ul li:first-child a.button {
 
 
 
-.questions .question.activated .toOpen{
+.questions .question.activated .toOpen {
     height: auto;
 }
 
@@ -420,7 +423,7 @@ footer img {
     width: 8em;
 }
 
-footer ul{
+footer ul {
     margin: 0;
     padding: 0;
 }
@@ -439,4 +442,149 @@ footer a {
 
 footer p {
     margin: 2em 0;
+}
+
+
+
+
+@media screen and (min-width: 48em) {
+    body {
+        background-image: url('https://cnbl-cdn.bamgrid.com/assets/b025dc386181ccdf3ec91c7ffb8964651be721311da49c29252b148f6e6e4362/original');
+    }
+
+    a.button {
+        font-size: 120%;
+    }
+
+    header img {
+        width: 5em;
+
+    }
+
+
+
+    .home>img {
+        width: 20em;
+    }
+
+    main>section>.title {
+        font-size: 1.45em;
+    }
+
+    main>section h2.title {
+        font-size: 1.7em;
+    }
+
+    .home .grid-plans {
+        grid-template-columns: repeat(2, 1fr);
+        width: 39em;
+        margin: auto;
+    }
+
+    .home .grid-plans .plan {
+        width: 18em;
+        margin-bottom: 2em;
+    }
+
+    .home .grid-plans .plan:nth-child(2) img {
+        padding: 1.5em 1.5em 0;
+        margin-bottom: 1em;
+    }
+
+    .home .grid-plans .plan:nth-child(1) img {
+        padding: 0;
+        margin-bottom: 1em;
+    }
+
+
+    .movies .movies-nav ul {
+        font-size: 1.1em;
+        padding-bottom: 2.2em;
+    }
+
+    .movies .movies-nav ul li {
+        padding-bottom: 0.5em;
+    }
+
+    .movies article.activated {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .introduction article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        text-align: start;
+        align-items: center;
+    }
+
+    .introduction article .info .title {
+        padding-left: 0.6em;
+        padding-bottom: 0;
+    }
+
+    .introduction article .info .informations {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+
+
+    .devices .grid-devices {
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 110%;
+        margin-top: 1em;
+    }
+
+    .devices .grid-devices article {
+        margin: 0;
+    }
+
+
+    .questions ul .question {
+        font-size: 120%;
+    }
+
+    .questions ul .question {
+        padding: 1.2em;
+        margin: 0.8em 0;
+    }
+
+    .questions ul .question .title img {
+        font-size: 0.9em;
+    }
+
+}
+
+
+@media screen and (min-width: 48em) {
+    body {
+        background-image: url('https://cnbl-cdn.bamgrid.com/assets/9bc833a42c7b6a0996d7f8584eccd4e21a13d39917377d82ce8c48d00228a48c/original');
+    }
+
+
+    main>section h1.title {
+        font-size: 1.8em;
+        margin: 0;
+    }
+
+    .home {
+        margin-top: 8em;
+        width: 32em;
+        padding: 0;
+        margin-left: 2em;
+    }
+
+    .home .grid-plans {
+        width: 30em;
+        margin: 0;
+    }
+
+    .home .grid-plans .plan {
+        width: 13em;
+    }
+
+
+
 }
