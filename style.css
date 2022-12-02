@@ -4,7 +4,7 @@
     --grey: hsl(228, 21%, 9%);
     --blue: hsl(214.1, 100%, 45%);
     --dark-blue: hsl(228.8, 67%, 5%);
-    --violet: hsl(258.1, 100%, 56%);
+    --violet: hsl(258, 100%, 56%);
     --violet-white: hsl(258.1, 0%, 75%);
     --violet-dark: hsl(252, 62%, 25%);
 
@@ -15,6 +15,8 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background: var(--dark-blue) url('https://cnbl-cdn.bamgrid.com/assets/1546b1222e513c2653e3c9faca2b009df570da1f6e6b3dbcc83d25d4bbd5bca0/original');
     background-size: contain;
     background-repeat: no-repeat;
@@ -23,7 +25,7 @@ body {
 
 main>section,
 footer {
-    padding: 0 4%;
+    padding: 0 5%;
     margin-top: 7em;
     box-sizing: border-box;
 }
@@ -33,17 +35,27 @@ footer {
     font-weight: 600;
 }
 
+a:hover{
+    color: white;
+}
+
 li:hover {
     cursor: pointer;
 }
 
-.button {
+a.button {
     display: block;
     color: white;
     padding: 0.9em;
     text-decoration: none;
     background-color: var(--violet);
     border-radius: 0.3em;
+    transition: filter 1s ease;
+}
+
+a.button:hover{
+    filter: brightness(1.3);
+    transition: filter 0.5s ease;
 }
 
 
@@ -55,14 +67,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 1.5em 1em 2em;
+    padding: 1em 1em 1em 2em;
     box-sizing: border-box;
     background-color: var(--dark-blue);
-
+    transition: background-color 1s ease;
 }
 
 header img {
     width: 4em;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 header ul {
@@ -78,13 +92,39 @@ header ul li a.button {
     margin-left: 0.5em;
     padding: .6em .5em;
     background-color: var(--blue);
+    border: 0.01em solid var(--blue);
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 header ul li:last-child a.button {
     background-color: rgba(0, 0, 0, 0.8);
     border: 0.01em solid white;
-    box-sizing: border-box;
+    transition: background-color 1s ease;
 }
+
+header ul li:last-child a.button:hover {
+    filter: brightness(0.95);
+    color: rgb(0, 0, 0);
+    background-color: white;
+    
+}
+
+/* hide logo and button  */
+header.hide{
+    background-color: transparent;
+}
+
+header.hide img {
+    opacity: 0;
+}
+
+header.hide ul li:first-child a.button {
+    opacity: 0;
+}
+
+
 
 
 /* Home section  */
@@ -160,10 +200,7 @@ header ul li:last-child a.button {
 }
 
 .movies article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 1.5em;
+    display: none;
 }
 
 .movies article img {
@@ -171,8 +208,11 @@ header ul li:last-child a.button {
     width: 100%;
 }
 
-.movies article.disabled {
-    display: none;
+.movies article.activated {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5em;
 }
 
 
@@ -190,10 +230,16 @@ header ul li:last-child a.button {
 }
 
 .plans .grid-plans .plan {
-    width: 20em;
-    padding: 3em 1em 0;
+    width: 23.5em;
+    padding: 5em 2.5em 0;
     box-sizing: border-box;
-    margin: 4em 0 4em;
+    margin: 2em 0 4em;
+}
+.plan.emphasis{
+    background: url('https://cnbl-cdn.bamgrid.com/assets/56773c66e02b16eb7603c803037f43e8572ea3a61574abd664f409a385a0b333/original');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -220,6 +266,10 @@ header ul li:last-child a.button {
     color: var(--violet-white);
     margin: 0;
 }
+
+
+
+
 
 
 /* introduction section */
@@ -292,23 +342,72 @@ header ul li:last-child a.button {
 .questions ul .question {
     list-style: none;
     background: var(--grey);
-    padding: 1.8em;
+    padding: 1.5em;
     margin: 1em 0;
 }
 
 .questions ul .question .title {
-    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: 400;
+    line-height: 1.8;
 }
 
-.questions .question .toOpen {
-    display: none;
+.questions ul .question .title p{
+    margin: 0;
+    font-size: 0.9em;
+
 }
+
+.questions ul .question .title img{
+    height: 1.5em;
+    margin-left: 0.5em;
+}
+
+
+.questions .question .toOpen {
+    color: var(--violet-white);
+    height: 0;
+    overflow: hidden;
+    transition: height 10s cubic-bezier(0, 1, 0, 1);
+}
+
+
+.questions .question .toOpen .response{
+    text-align: justify;
+    margin: 0;
+    font-size: 0.9em; 
+    line-height: 1.8;
+    margin-top: 1.8em;
+}
+
+.questions .question .toOpen .response li{
+    list-style: disc;
+    list-style-position: inside;
+    margin-top: 1em;
+    
+}
+.questions .question .toOpen .response li::before{
+    content: "";
+    margin: -0.4em;
+}
+
+
+
+
+
+.questions .question.activated .toOpen{
+    height: auto;
+}
+
+
+
 
 
 /* footer section  */
 footer {
-    margin: 10em 0 7em;
+    margin: 7em 0 7em;
     font-size: 69%;
     text-align: center;
     color: var(--violet-white);
@@ -319,6 +418,11 @@ footer img {
     margin: 0;
     display: inline-block;
     width: 8em;
+}
+
+footer ul{
+    margin: 0;
+    padding: 0;
 }
 
 footer li {
