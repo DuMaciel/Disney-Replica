@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header" class="hide">
         <img src="images/logo.svg" alt="logo">
         <nav>
             <ul>
@@ -42,7 +42,7 @@
                     <img src="./images/home/comboTriplo.png" alt="">
                     <a class="button" href="#">ASSINE AGORA</a>
                 </article>
-                <article class="plan">
+                <article id='altHeader' class="plan">
                     <p><a href="#">Assinar somente o Disney+ mensal</a></p>
                     <p><a href="#">Assinar somente o Disney+ anual</a></p>
                 </article>
@@ -55,13 +55,13 @@
         <section class="movies">
             <nav class="movies-nav">
                 <ul>
-                    <li class="activated">Em breve</li>
-                    <li>Mais populares</li>
-                    <li>Mais no star+</li>
+                    <li class="tab activated">Em breve</li>
+                    <li class="tab">Mais populares</li>
+                    <li class="tab">Mais no star+</li>
                 </ul>
             </nav>
 
-            <article class="emBreve">
+            <article class="emBreve activated">
                 <img src="./images/movies/emBreve/1.jfif" alt="">
                 <img src="./images/movies/emBreve/2.jfif" alt="">
                 <img src="./images/movies/emBreve/3.jfif" alt="">
@@ -70,7 +70,7 @@
                 <img src="./images/movies/emBreve/6.jfif" alt="">
             </article>
 
-            <article class="popular disabled">
+            <article class="popular">
                 <img src="./images/movies/popular/1.jfif" alt="">
                 <img src="./images/movies/popular/2.jfif" alt="">
                 <img src="./images/movies/popular/3.jfif" alt="">
@@ -79,7 +79,7 @@
                 <img src="./images/movies/popular/6.jfif" alt="">
             </article>
 
-            <article class="noStar disabled">
+            <article class="noStar">
                 <img src="./images/movies/noStar/1.jfif" alt="">
                 <img src="./images/movies/noStar/2.jfif" alt="">
                 <img src="./images/movies/noStar/3.jfif" alt="">
@@ -192,7 +192,10 @@
             <h2 class="title">Perguntas Frequentes</h2>
             <ul>
                 <li class="question">
-                    <p class="title">O que está incluido no Disney+?</p>
+                    <div class="title">
+                        <p class="title">O que está incluido no Disney+?</p>
+                        <img src="./images/mais.png" alt="">
+                    </div>
                     <div class="toOpen">
                         <ul class="response">
                             <p>O Disney+ oferece:</p>
@@ -217,7 +220,10 @@
                     </div>
                 </li>
                 <li class="question">
-                    <p class="title">Já tem o Disney+ ou o Star+ e quer o Combo+?</p>
+                    <div class="title">
+                        <p class="title">Já tem o Disney+ ou o Star+ e quer o Combo+?</p>
+                        <img src="./images/mais.png" alt="">
+                    </div>
                     <div class="toOpen">
                         <ul class="response">
                             <p>Ao assinar o Combo+:</p>
@@ -241,7 +247,10 @@
                     </div>
                 </li>
                 <li class="question">
-                    <p class="title">Quais formas de pagamento posso utilizar?</p>
+                    <div class="title">
+                    <p >Quais formas de pagamento posso utilizar?</p>
+                    <img src="./images/mais.png" alt="">
+                    </div>
                     <div class="toOpen">
                         <p class="response">Você pode utilizar: cartão de débito, cartão de crédito, PayPal, Mercado
                             Pago, e também empresas parceiras como Google Play Store, App Store da Apple; Mercado Livre
@@ -249,7 +258,10 @@
                     </div>
                 </li>
                 <li class="question">
-                    <p class="title">Como posso ver conteúdo com classificação indicativa até 16 e 18?</p>
+                    <div class="title">
+                        <p class="title">Como posso ver conteúdo com classificação indicativa até 16 e 18?</p>
+                        <img src="./images/mais.png" alt="">
+                    </div>
                     <div class="toOpen">
                         <p class="response">Para poder acessar o catálogo completo que inclui conteúdo com classificação
                             indicativa até 16 e 18, todos os usuários do Disney+ na América Latina devem atualizar as
@@ -290,4 +302,6 @@
     </footer>
 </body>
 
+
+<script src="./script.js"></script>
 </html>
