@@ -62,6 +62,7 @@ a.button:hover {
 /* header  */
 header {
     position: fixed;
+    z-index: 10;
     top: 0;
     width: 100%;
     display: flex;
@@ -413,7 +414,7 @@ footer {
     text-align: center;
     color: var(--violet-white);
     line-height: 1.8;
-    
+
 }
 
 footer img {
@@ -444,16 +445,18 @@ footer p {
 }
 
 
-footer #language{
+footer #language {
     color: var(--violet-white);
     background-color: transparent;
     border-color: transparent;
 }
-footer #language:hover{
+
+footer #language:hover {
     color: white;
     text-decoration: underline;
 }
-footer #language option{
+
+footer #language option {
 
     color: black;
 }
@@ -469,7 +472,7 @@ footer #language option{
         border-radius: 0.25em;
     }
 
-    header{
+    header {
         padding-left: 2.5em;
         padding-right: 2.5em;
     }
@@ -546,19 +549,22 @@ footer #language option{
         font-size: 1.1em;
         line-height: 1.5;
     }
-    
-    .introduction article:nth-child(2){
+
+    .introduction article:nth-child(2) {
         height: auto;
         position: relative;
         display: block;
+        z-index: 1;
     }
-    .introduction article:nth-child(2) .info{
+
+    .introduction article:nth-child(2) .info {
         width: 50%;
         position: absolute;
         right: 1em;
         bottom: 40%;
+        z-index: 2;
     }
-    
+
     .devices .grid-devices {
         grid-template-columns: repeat(4, 1fr);
         font-size: 110%;
@@ -596,6 +602,7 @@ footer #language option{
         font-size: 1.6em;
         margin: 0.5em 0;
     }
+
     main>section>h2.title {
         font-size: 2.4em;
     }
@@ -612,7 +619,7 @@ footer #language option{
         width: auto;
         gap: 1.5em;
         padding: 0;
-        
+
     }
 
     .home .grid-plans .plan {
@@ -623,13 +630,13 @@ footer #language option{
     .plans .grid-plans {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-    footer{
+
+    footer {
         font-size: 0.7em;
         box-sizing: content-box;
         max-width: 960px;
         margin: 12em auto 7em;
-        
+
     }
 
 }
