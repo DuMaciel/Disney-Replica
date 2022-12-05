@@ -444,6 +444,19 @@ footer p {
 }
 
 
+footer #language{
+    color: var(--violet-white);
+    background-color: transparent;
+    border-color: transparent;
+}
+footer #language:hover{
+    color: white;
+    text-decoration: underline;
+}
+footer #language option{
+
+    color: black;
+}
 
 
 @media screen and (min-width: 48em) {
@@ -533,9 +546,19 @@ footer p {
         font-size: 1.1em;
         line-height: 1.5;
     }
-
-
-
+    
+    .introduction article:nth-child(2){
+        height: auto;
+        position: relative;
+        display: block;
+    }
+    .introduction article:nth-child(2) .info{
+        width: 50%;
+        position: absolute;
+        right: 1em;
+        bottom: 40%;
+    }
+    
     .devices .grid-devices {
         grid-template-columns: repeat(4, 1fr);
         font-size: 110%;
@@ -605,7 +628,7 @@ footer p {
         font-size: 0.7em;
         box-sizing: content-box;
         max-width: 960px;
-        margin: 7em auto 7em;
+        margin: 12em auto 7em;
         
     }
 

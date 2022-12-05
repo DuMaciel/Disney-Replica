@@ -47,16 +47,22 @@ window.addEventListener('scroll', () => {
 
 
 
-const img = document.getElementById('imgCombo')
+const imgCombo = document.getElementById('imgCombo')
+const imgDow = document.getElementById('imgDow')
+
 if (window.innerWidth >= 768) {
-    img.src = "./images/home/Logocombo.png"
+    imgCombo.src = "./images/home/Logocombo.png"
+    imgDow.src = "./images/informations/downloadBig.png"
 }
 
 
 window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-        img.src = "./images/home/comboDuplo.png"
+        imgCombo.src = "./images/home/comboDuplo.png"
+        imgDow.src = "./images/informations/download.png"
+
     } else if (window.innerWidth >= 768) {
-        img.src = "./images/home/LogoCombo.png"
+        imgCombo.src = "./images/home/LogoCombo.png"
+        imgDow.src = "./images/informations/downloadBig.png"
     }
 })
