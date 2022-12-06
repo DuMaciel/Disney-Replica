@@ -627,8 +627,15 @@ footer #language option {
 
     }
 
+    .plans{
+        margin-top: 14em;
+    }
+
     .plans .grid-plans {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .plans .grid-plans .plan{
+        margin-top: 0;
     }
 
     footer {
