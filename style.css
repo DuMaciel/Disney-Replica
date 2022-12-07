@@ -201,16 +201,16 @@ header.hide ul li:first-child a.button {
     border-bottom: 0.3em solid white;
 }
 
-.movies article {
+.movies div {
     display: none;
 }
 
-.movies article img {
+.movies div img {
     border-radius: 0.3em;
     width: 100%;
 }
 
-.movies article.activated {
+.movies div.activated {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -276,23 +276,23 @@ header.hide ul li:first-child a.button {
 
 
 /* introduction section */
-.introduction article {
+.introduction div {
     text-align: center;
     padding: 5em 0;
 }
 
-.introduction article .informations {
+.introduction div .informations {
     padding: 1em;
     color: var(--violet-white);
     line-height: 1.5;
 }
 
-.introduction article img {
+.introduction div img {
     width: 100%;
     margin-bottom: 1em;
 }
 
-.introduction article:nth-child(2) {
+.introduction div:nth-child(2) {
     font-size: 90%;
 }
 
@@ -310,20 +310,20 @@ header.hide ul li:first-child a.button {
     justify-items: center;
 }
 
-.devices .grid-devices article {
+.devices .grid-devices div {
     margin: 1em;
 }
 
-.devices .grid-devices article img {
+.devices .grid-devices div img {
     width: 100%;
 }
 
-.devices .grid-devices article .title {
+.devices .grid-devices div .title {
     font-size: 1.3em;
     margin: 1em;
 }
 
-.devices .grid-devices article .informations {
+.devices .grid-devices div .informations {
     font-size: 0.9em;
     color: var(--violet-white);
     line-height: 1.8;
@@ -527,12 +527,12 @@ footer #language option {
         padding-bottom: 0.5em;
     }
 
-    .movies article.activated {
+    .movies div.activated {
         grid-template-columns: repeat(3, 1fr);
     }
 
 
-    .introduction article {
+    .introduction div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -540,24 +540,23 @@ footer #language option {
         align-items: center;
     }
 
-    .introduction article .info .title {
+    .introduction div .info .title {
         padding-left: 0.6em;
         padding-bottom: 0;
     }
 
-    .introduction article .info .informations {
-        font-size: 1.1em;
+    .introduction div .info .informations {
         line-height: 1.5;
     }
 
-    .introduction article:nth-child(2) {
+    .introduction div:nth-child(2) {
         height: auto;
         position: relative;
         display: block;
         z-index: 1;
     }
 
-    .introduction article:nth-child(2) .info {
+    .introduction div:nth-child(2) .info {
         width: 50%;
         position: absolute;
         right: 1em;
@@ -571,7 +570,7 @@ footer #language option {
         margin-top: 1em;
     }
 
-    .devices .grid-devices article {
+    .devices .grid-devices div {
         margin: 0;
     }
 

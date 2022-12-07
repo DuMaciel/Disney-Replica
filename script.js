@@ -14,7 +14,7 @@ questions.forEach((question) => {
 
 
 const navMovies = document.querySelectorAll('.tab');
-const tabMovies = document.querySelectorAll('.movies article');
+const tabMovies = document.querySelectorAll('.movies div');
 
 
 navMovies.forEach((tab, index) => {
