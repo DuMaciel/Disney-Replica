@@ -75,7 +75,7 @@ header {
 }
 
 header img {
-    width: 4em;
+    max-width: 4em;
     opacity: 1;
     transition: opacity 1s ease;
 }
@@ -142,7 +142,7 @@ header.hide ul li:first-child a.button {
 }
 
 .home>img {
-    width: 12em;
+    max-width: 12em;
     margin-bottom: 1em;
 }
 
@@ -155,7 +155,7 @@ header.hide ul li:first-child a.button {
 }
 
 .home .grid-plans .plan {
-    width: 20em;
+    max-width: 20em;
     margin-top: 1em;
 }
 
@@ -228,19 +228,20 @@ header.hide ul li:first-child a.button {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-items: center;
+    gap: 3em;
 
 }
 
 .plans .grid-plans .plan {
-    width: 23.5em;
-    padding: 5em 2.5em 0;
+    max-width: 23.5em;
+    padding: 4em 2.5em 2em;
     box-sizing: border-box;
-    margin: 2em 0 4em;
+    margin: 0;
 }
 
 .plan.emphasis {
     background: url('https://cnbl-cdn.bamgrid.com/assets/56773c66e02b16eb7603c803037f43e8572ea3a61574abd664f409a385a0b333/original');
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -268,6 +269,7 @@ header.hide ul li:first-child a.button {
     font-size: 0.7em;
     color: var(--violet-white);
     margin: 0;
+    margin-top: 5em;
 }
 
 
@@ -420,7 +422,7 @@ footer {
 footer img {
     margin: 0;
     display: inline-block;
-    width: 8em;
+    max-width: 8em;
 }
 
 footer ul {
@@ -465,10 +467,10 @@ footer #language option {
 @media screen and (min-width: 48em) {
     body {
         background-image: url('https://cnbl-cdn.bamgrid.com/assets/b025dc386181ccdf3ec91c7ffb8964651be721311da49c29252b148f6e6e4362/original');
+        font-size: 120%;
     }
 
     a.button {
-        font-size: 120%;
         border-radius: 0.25em;
     }
 
@@ -478,32 +480,25 @@ footer #language option {
     }
 
     header img {
-        width: 5em;
+        max-width: 5em;
 
     }
 
 
 
     .home>img {
-        width: 20em;
-    }
-
-    main>section>.title {
-        font-size: 1.45em;
-    }
-
-    main>section h2.title {
-        font-size: 1.7em;
+        max-width: 20em;
     }
 
     .home .grid-plans {
         grid-template-columns: repeat(2, 1fr);
-        width: 39em;
+        gap: 1em;
+        max-width: 39em;
         margin: auto;
     }
 
     .home .grid-plans .plan {
-        width: 18em;
+        max-width: 18em;
         margin-bottom: 2em;
     }
 
@@ -519,7 +514,6 @@ footer #language option {
 
 
     .movies .movies-nav ul {
-        font-size: 1.1em;
         padding-bottom: 2.2em;
     }
 
@@ -557,7 +551,7 @@ footer #language option {
     }
 
     .introduction div:nth-child(2) .info {
-        width: 50%;
+        max-width: 50%;
         position: absolute;
         right: 1em;
         bottom: 40%;
@@ -565,8 +559,8 @@ footer #language option {
     }
 
     .devices .grid-devices {
+        font-size: 80%;
         grid-template-columns: repeat(4, 1fr);
-        font-size: 110%;
         margin-top: 1em;
     }
 
@@ -574,22 +568,63 @@ footer #language option {
         margin: 0;
     }
 
-
-    .questions ul .question {
-        font-size: 120%;
-    }
-
     .questions ul .question {
         padding: 1.2em;
         margin: 0.8em 0;
     }
 
-    .questions ul .question .title img {
-        font-size: 0.9em;
+
+}
+
+@media screen and (min-width: 49em) and (max-width: 58em) {
+    .plans {
+        margin-top: 10em;
+    }
+
+    .plans .grid-plans {
+        margin-top: 4em;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5em;
+    }
+
+    .plans .grid-plans .plan {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .devices .grid-devices {
+        font-size: 80%;
     }
 
 }
 
+@media screen and (min-width: 58em) and (max-width: 64em) {
+    .plans {
+        margin-top: 10em;
+    }
+
+    .plans .grid-plans {
+        margin-top: 4em;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5em;
+    }
+
+    .plans .grid-plans .plan {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .devices .grid-devices {
+        font-size: 90%;
+    }
+
+}
 
 @media screen and (min-width: 64em) {
     body {
@@ -598,47 +633,52 @@ footer #language option {
 
 
     main>section h1.title {
-        font-size: 1.6em;
         margin: 0.5em 0;
     }
 
-    main>section>h2.title {
-        font-size: 2.4em;
-    }
 
     .home {
         margin-top: 8em;
-        width: 40vw;
+        max-width: 40vw;
         padding: 0;
         margin-left: 5em;
         text-align: center;
     }
 
     .home .grid-plans {
-        width: auto;
+        max-width: auto;
         gap: 1.5em;
         padding: 0;
 
     }
 
     .home .grid-plans .plan {
-        width: auto;
+        max-width: auto;
 
     }
 
-    .plans{
+    .plans {
         margin-top: 14em;
     }
 
     .plans .grid-plans {
+        margin-top: 4em;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
     }
-    .plans .grid-plans .plan{
-        margin-top: 0;
+
+    .plans .grid-plans .plan {
+        max-width: 20em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    .devices .grid-devices {
+        font-size: 100%;
     }
 
     footer {
-        font-size: 0.7em;
         box-sizing: content-box;
         max-width: 960px;
         margin: 12em auto 7em;
